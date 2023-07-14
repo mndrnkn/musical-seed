@@ -22,15 +22,15 @@ const Parameters: React.FC<Props> = ({ parameters }) => {
         </>
       )}
       {typeof parameters.harmonic === "string" && (
-         <div><strong>Guitar Tuning:</strong> {parameters.harmonic}</div>
+         <div><strong>Guitar Tuning:</strong> <div>{parameters.harmonic}</div></div>
       )}
       </div>
       <div className="rhythmic">
     <h4>Rhythmic:</h4>
       {typeof parameters.rhythm !== "string" && (
         <>
-          <strong>Tempo:</strong> {parameters.rhythm.tempo}bpm
-          <strong>Time Signature:</strong> {parameters.rhythm.timeSignature.beatCount}/{parameters.rhythm.timeSignature.beatUnit}
+          <div><strong>Tempo:</strong> {parameters.rhythm.tempo}bpm</div>
+          <div><strong>Time Signature:</strong> {parameters.rhythm.timeSignature.beatCount}/{parameters.rhythm.timeSignature.beatUnit}</div>
         </>
       )}
       {typeof parameters.rhythm === "string" && (
@@ -39,9 +39,22 @@ const Parameters: React.FC<Props> = ({ parameters }) => {
       </div>
     </div>
     <style jsx>{`
+
+    h3 {
+      white-space: nowrap;
+    }
+        .parameters {
+          width: 100%;
+          display: flex;
+          gap: 16px;
+        }
+
+
         .parameterWrapper {
           display: grid;
+          width: 100%;
           grid-template-columns: 1fr 1fr;
+          gap: 16px;
         }
 
 
