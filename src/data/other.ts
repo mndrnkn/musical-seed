@@ -3,7 +3,7 @@ import { InstrumentCategory } from "./types";
 
 export const other: InstrumentCategory = [
         {
-            name: 'Pennywhistle',
+            name: 'Pennywhistle - C',
             setUpEase: 2,
             priority: 3,
             volume: 2,
@@ -11,7 +11,7 @@ export const other: InstrumentCategory = [
             key: 'C'
         },
         {
-            name: 'Pennywhistle',
+            name: 'Pennywhistle - F',
             setUpEase: 2,
             priority: 3,
             volume: 2, 
@@ -19,7 +19,7 @@ export const other: InstrumentCategory = [
             key: 'F'
         },
         {
-            name: 'Harmonica',
+            name: 'Harmonica - G',
             setUpEase: 2,
             priority: 3,
             volume: 3, 
@@ -27,7 +27,7 @@ export const other: InstrumentCategory = [
             key: 'G'
         },
         {
-            name: 'Harmonica',
+            name: 'Harmonica - D',
             setUpEase: 2,
             priority: 3,
             volume: 3, 

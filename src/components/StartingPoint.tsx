@@ -18,6 +18,7 @@ import {
     TimeSignature,
     RhythmType,
     HarmonicFramework,
+    KeySignature,
   } from "@/data/types";
 
 const StartingPoint: React.FC = () => {
@@ -114,14 +115,29 @@ const StartingPoint: React.FC = () => {
           tempo: Math.floor(Math.random() * (140 - 70 + 1)) + 70,
         };
       }, [getTimeSignature, isRhythmTrack]);
+
+      const getKeySignature = (category: InstrumentCategory): KeySignature | undefined => {
+        const instrumentWithKey = category.find((instrument) => instrument.key !== undefined);
+        return instrumentWithKey?.key;
+      }
     
-      const getHarmonicFramework: () => HarmonicFramework = useCallback(() => {
+      const getHarmonicFramework: (currentInstruments: Instrument[]) => HarmonicFramework = useCallback((currentInstruments) => {
+        const instrumentKeySignature = getKeySignature(currentInstruments)
+        
+        if(instrumentKeySignature) {
+          return {
+            keySignature: instrumentKeySignature,
+            tonalFramework: tonalSet[0]
+          }
+        }
+
         if (hasAlternateTuning) {
           const tuningIndex = Math.floor(
             Math.random() * guitarAlternateTunings.length
           );
           return `${guitarAlternateTunings[tuningIndex].name}: ${guitarAlternateTunings[tuningIndex].tuning}`;
         }
+
         return {
           keySignature: notes[Math.floor(Math.random() * notes.length)],
           tonalFramework: getTonalFramework(),
@@ -162,7 +178,7 @@ const StartingPoint: React.FC = () => {
 
     
         const theParams: MusicalParameters = {
-          harmonic: getHarmonicFramework(),
+          harmonic: getHarmonicFramework(randomInstruments),
           rhythm: getRhythym(),
         };
         setValue('musicalParameters', theParams)

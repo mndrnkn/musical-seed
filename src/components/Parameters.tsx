@@ -11,7 +11,7 @@ const Parameters: React.FC<Props> = ({ parameters }) => {
 
   return (
     <div className="parameters">
-      <h3>Musical Paramenters</h3>
+      <h3>Musical Parameters</h3>
     <ul>
       <li><h4>Harmonic:</h4>
         <ul>
