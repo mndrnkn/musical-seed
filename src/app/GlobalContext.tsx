@@ -12,9 +12,10 @@ export type  State = {
   isAcoustic: boolean
   isDigital: boolean
   isRhythmTrack: boolean
+  hasAlternateTuning: boolean
   timeDate: Date
   showConfig: boolean
-  hasAlternateTuning: boolean,
+  priority: number,
   instrumentation: Instrument[],
   musicalParameters: MusicalParameters | null
   showInstrumentation: boolean,
@@ -35,6 +36,7 @@ export const initialState: State = {
   showConfig: false,
   hasAlternateTuning: false, 
   instrumentation: [],
+  priority: 2,
   musicalParameters: null,
   showInstrumentation: false, 
 };

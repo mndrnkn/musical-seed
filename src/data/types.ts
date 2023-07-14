@@ -10,6 +10,7 @@ export type Instrument = {
   alternateTuning?:boolean
   volume: Level;
   type: 'acoustic' | 'electric' | 'digital' | 'acoustic-electric'
+  key?: KeySignature
 };
 
 export type InstrumentCategory = Instrument[]

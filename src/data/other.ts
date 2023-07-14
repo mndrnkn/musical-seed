@@ -3,32 +3,36 @@ import { InstrumentCategory } from "./types";
 
 export const other: InstrumentCategory = [
         {
-            name: 'Pennywhistle C',
+            name: 'Pennywhistle',
             setUpEase: 2,
             priority: 3,
             volume: 2,
-            type: 'acoustic'
+            type: 'acoustic',
+            key: 'C'
         },
         {
-            name: 'Pennywhistle F',
+            name: 'Pennywhistle',
             setUpEase: 2,
             priority: 3,
             volume: 2, 
-            type: 'acoustic'
+            type: 'acoustic',
+            key: 'F'
         },
         {
-            name: 'Harmonica G',
+            name: 'Harmonica',
             setUpEase: 2,
             priority: 3,
             volume: 3, 
-            type: 'acoustic'
+            type: 'acoustic',
+            key: 'G'
         },
         {
-            name: 'Harmonica D',
+            name: 'Harmonica',
             setUpEase: 2,
             priority: 3,
             volume: 3, 
-            type: 'acoustic'
+            type: 'acoustic',
+            key: 'D',
         },
         {
             name: 'Trumpet',

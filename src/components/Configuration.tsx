@@ -35,8 +35,8 @@ const Configuration: React.FC = () => {
       case hour > 20:
       case hour < 10:
         setValue('acceptableVolume', 1);
-
         break;
+
       case hour > 10:
       case hour < 18:
         setValue('acceptableVolume', 3);
