@@ -11,39 +11,40 @@ const Parameters: React.FC<Props> = ({ parameters }) => {
 
   return (
     <div className="parameters">
-      <h3>Musical Parameters</h3>
-    <ul>
-      <li><h4>Harmonic:</h4>
-        <ul>
+      <h3>Musical Parameters:</h3>
+    <div className="parameterWrapper">
+      <div className="harmonic">
+      <h4>Harmonic:</h4>
       {typeof parameters.harmonic !== "string" && (
         <>
-          <li><strong>Key Signature:</strong> {parameters.harmonic.keySignature}</li>
-          <li><strong>Tonal Framework:</strong> {parameters.harmonic.tonalFramework.name}</li>
+          <div><strong>Key Signature:</strong> {parameters.harmonic.keySignature}</div>
+          <div><strong>Tonal Framework:</strong> {parameters.harmonic.tonalFramework.name}</div>
         </>
       )}
-
-{typeof parameters.harmonic === "string" && (
-         <li><strong>Guitar Tuning:</strong> {parameters.harmonic}</li>
+      {typeof parameters.harmonic === "string" && (
+         <div><strong>Guitar Tuning:</strong> {parameters.harmonic}</div>
       )}
-      </ul>
-      </li>
-  <li>
+      </div>
+      <div className="rhythmic">
     <h4>Rhythmic:</h4>
-    <ul>
       {typeof parameters.rhythm !== "string" && (
         <>
-          <li><strong>Tempo:</strong> {parameters.rhythm.tempo}bpm</li>
-          <li><strong>Time Signature:</strong> {parameters.rhythm.timeSignature.beatCount}/{parameters.rhythm.timeSignature.beatUnit}</li>
+          <strong>Tempo:</strong> {parameters.rhythm.tempo}bpm
+          <strong>Time Signature:</strong> {parameters.rhythm.timeSignature.beatCount}/{parameters.rhythm.timeSignature.beatUnit}
         </>
       )}
       {typeof parameters.rhythm === "string" && (
-        <li><strong>Rhythm track:</strong> {parameters.rhythm}</li>
+        <><strong>Rhythm track:</strong> {parameters.rhythm}</>
       )}
-      </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
     <style jsx>{`
-   
+        .parameterWrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+
+
     `}
     </style>
     </div>

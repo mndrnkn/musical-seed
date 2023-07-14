@@ -200,10 +200,11 @@ const StartingPoint: React.FC = () => {
           <Parameters parameters={musicalParameters} />
           <style jsx>{`
             .startingPoint {
-              display: grid;
-              grid-template-columns: 1fr 2fr;
+              display: flex;
+              flex-direction: column;
+              gap: 30px;
+              align-items: center;
             }
-
           `}
           </style>
         </div>
