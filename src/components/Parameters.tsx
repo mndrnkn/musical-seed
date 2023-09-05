@@ -43,19 +43,9 @@ const Parameters: React.FC<Props> = ({ parameters }) => {
     h3 {
       white-space: nowrap;
     }
-        .parameters {
-          width: 100%;
-          display: flex;
-          gap: 16px;
-        }
+     
 
-
-        .parameterWrapper {
-          display: grid;
-          width: 100%;
-          grid-template-columns: 1fr 1fr;
-          gap: 16px;
-        }
+      
 
 
     `}

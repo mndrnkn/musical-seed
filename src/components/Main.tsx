@@ -17,7 +17,7 @@ const Main: React.FC = () => {
             gap: 32px;
             align-items: center;
             padding: 32px;
-            min-width: 600px;
+            width: 400px;
             max-width: 100%;
           }
         `}

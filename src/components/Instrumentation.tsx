@@ -9,10 +9,11 @@ type Props = {
   instruments: Instrument[] 
 }
 const Instrumentation: React.FC<Props> = ({instruments}) => {
-
+  console.log('the instruments', instruments)
   if(instruments.length === 0) {
-  }
     return null
+  }
+    
 
   return (
     <div className='intrumentation'>
@@ -27,16 +28,6 @@ const Instrumentation: React.FC<Props> = ({instruments}) => {
       </ol>
       <style jsx>{`
     
-        ol {
-          gap: 26px;
-          flex-direction: row;
-        }
-        li {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-        }
-
         label {
           font-weight: 700;
           text-align: center;

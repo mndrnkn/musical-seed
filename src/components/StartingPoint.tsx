@@ -171,12 +171,12 @@ const StartingPoint: React.FC = () => {
           }
           randomInstruments.push(randomInstrument);
         }
+
   
         setValue('instrumentation', randomInstruments)
         setValue('showInstrumentation', true)
         setValue('showConfig', false)
 
-    
         const theParams: MusicalParameters = {
           harmonic: getHarmonicFramework(randomInstruments),
           rhythm: getRhythym(),
@@ -200,10 +200,7 @@ const StartingPoint: React.FC = () => {
           <Parameters parameters={musicalParameters} />
           <style jsx>{`
             .startingPoint {
-              display: flex;
-              flex-direction: column;
-              gap: 30px;
-              align-items: center;
+              
             }
           `}
           </style>
