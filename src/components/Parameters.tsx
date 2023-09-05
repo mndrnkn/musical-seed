@@ -40,9 +40,11 @@ const Parameters: React.FC<Props> = ({ parameters }) => {
     </div>
     <style jsx>{`
 
-    h3 {
-      white-space: nowrap;
-    }
+   .parameterWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+   }
      
 
       

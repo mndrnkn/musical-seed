@@ -6,9 +6,9 @@ import Configuration from "./Configuration";
 const Main: React.FC = () => {
   return (
     <div className="main">
+      <h1>Music Prompt</h1>
       <Configuration />
       <StartingPoint />
-  
       <style jsx>
         {`
           .main {

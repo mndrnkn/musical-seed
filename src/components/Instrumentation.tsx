@@ -27,10 +27,13 @@ const Instrumentation: React.FC<Props> = ({instruments}) => {
       </li>)}
       </ol>
       <style jsx>{`
-    
+        ol li {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
         label {
           font-weight: 700;
-          text-align: center;
         }
       `
       }
