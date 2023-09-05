@@ -11,8 +11,8 @@ type Props = {
 const Instrumentation: React.FC<Props> = ({instruments}) => {
 
   if(instruments.length === 0) {
-    return null
   }
+    return null
 
   return (
     <div className='intrumentation'>
