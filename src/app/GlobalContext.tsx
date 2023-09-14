@@ -15,6 +15,7 @@ export type  State = {
   hasAlternateTuning: boolean
   timeDate: Date
   showConfig: boolean
+  showInstruments: boolean
   priority: number,
   instrumentation: Instrument[],
   musicalParameters: MusicalParameters | null
@@ -34,6 +35,7 @@ export const initialState: State = {
   isRhythmTrack: Math.random() < 0.5,
   timeDate: new Date(),
   showConfig: false,
+  showInstruments: false,
   hasAlternateTuning: false, 
   instrumentation: [],
   priority: 2,
