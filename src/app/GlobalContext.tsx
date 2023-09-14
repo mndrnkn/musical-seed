@@ -30,7 +30,7 @@ export const initialState: State = {
   acceptableVolume: 2,
   isElectric: true,
   isAcoustic: true,
-  isDigital: true,
+  isDigital: false,
   isRhythmTrack: Math.random() < 0.5,
   timeDate: new Date(),
   showConfig: false,

@@ -29,6 +29,9 @@ const StartingPoint: React.FC = () => {
       heavyRotation,
       acceptableVolume,
       conventionality,
+      isAcoustic,
+      isDigital,
+      isElectric,
       isRhythmTrack,
       showConfig,
       hasAlternateTuning,
@@ -61,6 +64,29 @@ const StartingPoint: React.FC = () => {
         },
         [heavyRotation]
       );
+
+      const isCorrectType = useCallback(
+        (instrument: Instrument) => {
+           if(instrument.type === 'digital' && isDigital) {
+            return true
+           }
+
+           if(instrument.type === 'electric' && isElectric) {
+            return true
+           }
+
+           if(instrument.type === 'acoustic-electric' && (isElectric || isAcoustic)) {
+            return true
+           }
+
+           if(instrument.type === 'acoustic' && isAcoustic) {
+            return true
+           }
+
+           return false
+        },
+        [isAcoustic,isDigital, isElectric]
+      );
     
       const filterInstrumentCategory: (
         category: InstrumentCategory
@@ -71,7 +97,7 @@ const StartingPoint: React.FC = () => {
             if (
               instrument.setUpEase <= ease &&
               instrument.volume <= acceptableVolume &&
-              isInRotationRange(instrument)
+              isInRotationRange(instrument) && isCorrectType(instrument)
             ) {
               fitsCriteria.push(instrument);
             }
@@ -80,7 +106,7 @@ const StartingPoint: React.FC = () => {
             ? null
             : fitsCriteria[Math.floor(Math.random() * fitsCriteria.length)];
         },
-        [acceptableVolume, ease, isInRotationRange]
+        [acceptableVolume, ease, isInRotationRange, isCorrectType]
       );
     
       const getTonalFramework: () => TonalFramework = useCallback(() => {
@@ -149,9 +175,9 @@ const StartingPoint: React.FC = () => {
       const getStartingPoint = useCallback(() => {
         const categoryInstruments: Instrument[] = (
           ["bass", "guitar", "keyboard", "rhythm", "other"] as const
-        ).flatMap((type) => {
+        ).flatMap((instrumentType) => {
           const categoryInstrument: Instrument | null = filterInstrumentCategory(
-            instruments[type]
+            instruments[instrumentType]
           );
           return categoryInstrument ? [categoryInstrument] : [];
         });

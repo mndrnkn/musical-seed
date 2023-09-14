@@ -14,7 +14,7 @@ export const keyboards: InstrumentCategory = [
             setUpEase: 1,
             priority: 1,
             volume: 1, 
-            type: 'electric'
+            type: 'priority'
         },
         {
             name: 'MIDI keyboard',
