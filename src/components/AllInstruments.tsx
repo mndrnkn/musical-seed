@@ -1,12 +1,18 @@
-import Image from 'next/image'
+import React from "react";
+import { Instrument } from "@/data/types";
+import Image from "next/image";
 import { instruments } from '@/data/instruments'
 import InstrumentDetails from '@/components/InstrumentDetails'
 
-export default function Instruments() {
-  console.log(instruments)
-  return (
-    <main className='main'>
-      <h1>INSTRUMENTS</h1>
+type Props = {
+    instrument: Instrument
+}
+
+const AllInstruments: React.FC<Props> = ({instrument}) => {
+
+return (
+    <div>
+        <h1>INSTRUMENTS</h1>
        <h2>Basses</h2>
        {instruments.bass.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
        <h2>Guitars</h2>
@@ -17,6 +23,9 @@ export default function Instruments() {
        {instruments.rhythm.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
        <h2>Other</h2>
        {instruments.other.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
-    </main>
-  )
+    </div>
+)
+
 }
+
+export default AllInstruments

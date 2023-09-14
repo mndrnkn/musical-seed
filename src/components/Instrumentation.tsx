@@ -9,7 +9,6 @@ type Props = {
   instruments: Instrument[] 
 }
 const Instrumentation: React.FC<Props> = ({instruments}) => {
-  console.log('the instruments', instruments)
   if(instruments.length === 0) {
     return null
   }
