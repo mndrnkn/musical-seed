@@ -19,12 +19,44 @@ export const other: InstrumentCategory = [
             key: 'F'
         },
         {
+            name: 'Pennywhistle - G',
+            setUpEase: 2,
+            priority: 3,
+            volume: 2, 
+            type: 'acoustic',
+            key: 'G'
+        },
+        {
+            name: 'Pennywhistle - D',
+            setUpEase: 2,
+            priority: 3,
+            volume: 2, 
+            type: 'acoustic',
+            key: 'G'
+        },
+        {
             name: 'Harmonica - G',
             setUpEase: 2,
             priority: 3,
             volume: 3, 
             type: 'acoustic',
             key: 'G'
+        },
+        {
+            name: 'Harmonica - C',
+            setUpEase: 2,
+            priority: 3,
+            volume: 3, 
+            type: 'acoustic',
+            key: 'C',
+        },
+        {
+            name: 'Harmonica - A',
+            setUpEase: 2,
+            priority: 3,
+            volume: 3, 
+            type: 'acoustic',
+            key: 'A',
         },
         {
             name: 'Harmonica - D',
@@ -43,13 +75,6 @@ export const other: InstrumentCategory = [
         },
         {
             name: 'mandolin',
-            setUpEase: 1,
-            priority: 3,
-            volume: 2, 
-            type: 'acoustic'
-        },
-        {
-            name: 'Kazoo',
             setUpEase: 1,
             priority: 3,
             volume: 2, 

@@ -40,4 +40,18 @@ export const rhythm: InstrumentCategory =  [
             type: 'electric'
 
         },
+        {
+            name: 'Güiro',
+            setUpEase: 1,
+            priority: 3, 
+            volume: 1, 
+            type: 'acoustic',
+        },
+        {
+            name: 'Claves',
+            setUpEase: 1, 
+            priority: 3,
+            volume: 2, 
+            type: "acoustic"
+        },
     ]
