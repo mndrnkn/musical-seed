@@ -1,8 +1,5 @@
 import React, {useContext, useCallback} from "react";
-import { Instrument } from "@/data/types";
-import Image from "next/image";
 import { instruments } from '@/data/instruments'
-import InstrumentDetails from '@/components/InstrumentDetails'
 import GlobalContext, { State } from "@/app/GlobalContext";
 
 
@@ -20,17 +17,17 @@ return (
     {state.showInstruments && <div>
         <h1>INSTRUMENTS</h1>
        <h2>Basses</h2>
-       {instruments.bass.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
+       <ul>{instruments.bass.map((item) => <li key={item.name}>{item.name}</li>)}</ul>
        <h2>Guitars</h2>
-       {instruments.guitar.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
+       <ul>{instruments.guitar.map((item) => <li key={item.name}>{item.name}</li>)}</ul>
        <h2>Keyboards</h2>
-       {instruments.keyboard.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
+       <ul>{instruments.keyboard.map((item) => <li key={item.name}>{item.name}</li>)}</ul>
        <h2>Rhythm</h2>
-       {instruments.rhythm.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
+       <ul>{instruments.rhythm.map((item) => <li key={item.name}>{item.name}</li>)}</ul>
        <h2>Other</h2>
-       {instruments.other.map((item) => <InstrumentDetails instrument={item} key={item.name}/>)}
+       <ul>{instruments.other.map((item) => <li key={item.name}>{item.name}</li>)}</ul>
     </div>}
-   
+   <style jsx>{`ul { margin-bottom: 40px;}`}</style>
 
     </>
 )

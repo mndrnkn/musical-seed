@@ -20,7 +20,6 @@ const Instrumentation: React.FC<Props> = ({instruments}) => {
       <ol>
       {instruments.map((instrument: Instrument) => <li key={instrument.name}>
         <>
-        <Image src="/instruments/placeholder.jpg" width={250} height={125}  alt={instrument.name}/>
        <label>{instrument.name}</label>
        </>
       </li>)}

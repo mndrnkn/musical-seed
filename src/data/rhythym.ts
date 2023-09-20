@@ -10,6 +10,13 @@ export const rhythm: InstrumentCategory =  [
             type: 'acoustic'
         },
         {
+            name: 'Cabasa',
+            setUpEase: 1,
+            priority: 2, 
+            volume: 1, 
+            type: 'acoustic',
+        },
+        {
             name: 'Egg',
             setUpEase: 1,
             priority: 2,

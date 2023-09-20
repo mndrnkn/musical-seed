@@ -2,14 +2,14 @@ import { InstrumentCategory } from "./types";
 
 export const guitars: InstrumentCategory = [
   {
-    name: "Martin - maple",
+    name: "Martin - D16GT",
     setUpEase: 1,
     priority: 1,
     volume: 2,
     type: "acoustic",
   },
   {
-    name: "Martin - mahogany",
+    name: "Martin - D15",
     setUpEase: 1,
     priority: 2,
     volume: 2,
