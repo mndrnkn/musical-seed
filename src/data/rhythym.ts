@@ -10,6 +10,13 @@ export const rhythm: InstrumentCategory =  [
             type: 'acoustic'
         },
         {
+            name: 'Lap Cajón',
+            setUpEase: 1,
+            priority: 1,
+            volume: 2,
+            type: 'acoustic'
+        },
+        {
             name: 'Cabasa',
             setUpEase: 1,
             priority: 2, 
@@ -17,7 +24,7 @@ export const rhythm: InstrumentCategory =  [
             type: 'acoustic',
         },
         {
-            name: 'Egg',
+            name: 'Egg Shakers',
             setUpEase: 1,
             priority: 2,
             volume: 1,
@@ -49,6 +56,13 @@ export const rhythm: InstrumentCategory =  [
         },
         {
             name: 'Claves',
+            setUpEase: 1, 
+            priority: 3,
+            volume: 2, 
+            type: "acoustic"
+        },
+        {
+            name: 'Castanets',
             setUpEase: 1, 
             priority: 3,
             volume: 2, 

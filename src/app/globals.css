@@ -36,10 +36,9 @@ body {
 
 @media screen and (min-width: 600px) {
   main {
-    border: double 5px var(--color-3);
     width: fit-content;
-    border-radius: 60px;
-    box-shadow: 0 0 24px;
+    box-shadow: 0 0 5px #aaa;
+    margin-top: 10px;
   }
 }
 

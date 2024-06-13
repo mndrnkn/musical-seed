@@ -17,9 +17,9 @@ export const keyboards: InstrumentCategory = [
             type: 'electric'
         },
         {
-            name: 'MIDI keyboard',
-            setUpEase: 3,
-            priority: 3,
+            name: 'Roland Go',
+            setUpEase: 1,
+            priority: 2,
             volume: 1,
             type: 'digital'
         },  
